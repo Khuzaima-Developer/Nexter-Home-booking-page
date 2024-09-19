@@ -1,0 +1,42 @@
+.footer {
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;
+    color: #fff;
+
+    padding: 8rem;
+
+    &-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+        font-size: 1.4rem;
+        place-items: center;
+        text-transform: uppercase;
+        text-align: center;
+        gap: 1rem;
+       
+    }
+
+    &-item {
+        padding: 1.5rem;
+        opacity: .6;
+        transition: all .3s;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: .8;
+        }
+    }
+
+    &-copyright {
+        margin-top: 6rem;
+        margin-right: auto;
+        margin-left: auto;
+        color: #aaaa;
+        width: 70%;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+
+}

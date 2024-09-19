@@ -1,0 +1,22 @@
+// media query manager
+// 0-600px phone
+// 600 - 900px tablet
+// 900- 1200px  tablet lanscape/laptop
+// 1200 - 1800px normal desktop
+// 1800 <    big size desktop
+
+// ORDER:  base + typography > general layout + grid > page layout > components
+
+
+
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+  
+@mixin minRespond($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

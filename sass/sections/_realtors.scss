@@ -1,0 +1,69 @@
+.realtors {
+    background-color: $color-secondary;
+    grid-column: col-start 7 / full-end;
+
+    display: grid;
+    row-gap: 2rem;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem;
+
+    @include respond($tablet) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4 ;
+    }
+
+    &-heading {
+        text-transform: uppercase;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        row-gap: 5vh;
+        column-gap: 2rem;
+        align-items: center;
+
+        @include respond($tablet) {
+            grid-auto-flow: column;
+
+        }
+
+        @include respond($phone) {
+            grid-auto-flow: row;
+        }
+    }
+}
+
+.realtor {
+    &-img {
+        width: 7rem;
+        border-radius: 50%;
+        display: block;
+    }
+
+    &-details {
+        @include respond($tablet) {
+            &:not(:last-of-type) {
+                margin-right: 2rem;
+            }
+        }
+
+        @include respond($phone) {
+            &:not(:last-of-type) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-name {
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    &-houses {
+        color: #AAAA;
+        text-transform: uppercase;
+    }
+}
